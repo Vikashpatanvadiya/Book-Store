@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning vs Doomscrolling</title>
+    <style>
+        body {
+            background-color: #2d0c5e; /* Dark purple background */
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .highlight {
+            background-color: rgba(124, 102, 255, 0.7); /* Light purple */
+            padding: 4px 8px;
+            display: inline-block;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .highlight::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(124, 102, 255, 0.7);
+            transform: skewX(-10deg) rotate(-1deg);
+            z-index: -1;
+            border-radius: 5px;
+        }
+
+        .graph-container {
+            position: relative;
+            width: 90%;
+            max-width: 400px;
+            margin: 30px auto;
+            height: 250px;
+        }
+
+        .curve {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .button {
+            background-color: white;
+            color: #2d0c5e;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0 5px #aaa;
+        }
+
+        .extext {
+            background-color: rgba(255, 99, 71, 0.5); /* Tomato color with transparency */
+            padding: 4px 8px; /* Adjusted padding for a better fit */
+            display: inline; /* Keep it inline to fit text closely */
+            font-weight: bold;
+            border-radius: 5px; /* Rounded corners for a softer look */
+            position: relative; /* For the pseudo-element */
+        }
+
+        .extext::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 99, 71, 0.5); /* Same color as background */
+            clip-path: polygon(0 10%, 10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%); /* Irregular shape */
+            z-index: -1; /* Behind the text */
+        }
+    </style>
+</head>
+<body>
+    <h2>Designed specifically for mobile, Wizdom helps you turn your 
+        <span class="highlight">screen time</span> into 
+        <span class="extext">impactful learning.</span>
+    </h2>
+
+    <div class="graph-container">
+        <svg class="curve" viewBox="0 0 400 250">
+            <!-- Learning Path -->
+            <path d="M 10 200 C 100 150, 200 50, 390 20" stroke="#A991FF" stroke-width="4" fill="transparent"/>
+            <!-- Doomscrolling Path -->
+            <path d="M 10 200 C 100 180, 200 190, 390 185" stroke="#FF4C4C" stroke-width="3" fill="transparent"/>
+            <!-- Character Icon -->
+            <circle cx="390" cy="20" r="12" fill="purple" stroke="orange" stroke-width="3"/>
+            <!-- Sad Face Icon -->
+            <circle cx="390" cy="185" r="10" fill="orange" stroke="black" stroke-width="2"/>
+        </svg>
+    </div>
+
+    <button class="button">I'm ready</button>
+</body>
+</html>

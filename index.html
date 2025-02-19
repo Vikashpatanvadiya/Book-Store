@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Store</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="button-container">
+                <button class="button">Home</button>
+                <a href="registration.html"><button class="button">Register</button></a>
+                <a href="Profile.html"><button class="button">Profile</button></a>
+                <a href="Catalog.html"><button class="button">Catalogue</button></a>
+                <a href="/cart.html"><button class="button">Shopping Cart</button></a>
+                <a href="/Payment.html"><button class="button">Payment</button></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for a book...">
+            <button class="button" onclick="searchBook()">Search</button>
+        </div>
+
+        <!-- New section for displaying books -->
+        <section id="books">
+            <div class="book">
+                <img src="/psych-money-cover.webp" alt="Book 1">
+                <p>Price: $10.00</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="/mindset.webp" alt="Book 2">
+                <p>Price: $15.00</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="/automic habits.webp" alt="Book 3">
+                <p>Price: $20.00</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="/the-growth-mindset-1.jpg" alt="Book 1">
+                <p>Price: $10.00</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="/book-img2.jpg" alt="Book 2">
+                <p>Price: $15.00</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="/81OrquAzkJL._AC_UF1000-1000_QL80_.jpg" alt="Book 3">
+                <p>Price: $20.00</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="/chirakukal.webp" alt="Book 1">
+                <p>Price: $10.00</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="/best-motivational-books-28.png" alt="Book 2">
+                <p>Price: $15.00</p>
+                <button class="button">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="/rqhektknxg3pwey9w8pr-161df101218989-en.webp" alt="Book 3">
+                <p>Price: $20.00</p>
+                <button class="button">Add to Cart</button>
+            </div>
+        </section>
+
+        <section id="contact-us">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="button">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        function searchBook() {
+            const query = document.getElementById('search-input').value;
+            alert(`Searching for: ${query}`);
+        }
+    </script>
+</body>
+</html>
